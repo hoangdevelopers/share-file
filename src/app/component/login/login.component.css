@@ -1,0 +1,8 @@
+.infor {
+    float: right;
+    color: white;
+    padding: 16px;
+}
+.info>button{
+    background-color: white;
+}

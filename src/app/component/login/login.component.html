@@ -1,3 +1,10 @@
-<div> {{ (user | async)?.displayName }} </div>
-<button (click)="login()">Login</button>
-<button (click)="logout()">Logout</button>
+<div ngClass="infor">
+    <div *ngIf=" (user | async)?.uid ; else elseLogin" >
+    <span> {{ (user | async)?.displayName}} </span>
+
+    <span (click)="logout()">| Đăng xuất</span>
+</div>
+<ng-template #elseLogin>
+    <span (click)="login()">Đăng nhập</span>
+</ng-template>
+</div>
